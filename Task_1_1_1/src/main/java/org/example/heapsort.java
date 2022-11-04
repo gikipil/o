@@ -3,13 +3,14 @@ package org.example;
 /**
  * Класс сортировки кучей, содержащий метод сортировки.
  */
-public class heapsort {
+public class Heapsort {
     /** Метод sort класса Heapsort является статичным публичным методом.
      * Не требует обьявление обьекта для использования.
      * @param len - длина массива, типа Int.
      * @param list - непосредственно массив, который нужно отсортировать.
      *             Массив должен быть типа Int/
-     * @return возвращает Строку типа String с отсортированным массиов, элементы которого разделены знаком " ".
+     * @return возвращает Строку типа String с отсортированным массивом.
+     *             Элементы разделены знаком " ".
      */
     public static String sort (int len, int [] list) {
         int a = 0;
@@ -18,7 +19,9 @@ public class heapsort {
             return "";
         }
         for (int i = len / 2; i >= 0; i--) {
-            int max; int flag = 0; int up = i;
+            int max;
+            int flag = 0;
+            int up = i;
             while ((up * 2 <= len - 1) && (flag == 0)) {
                 if (up * 2 == len - 1) {
                     max = up * 2;
@@ -31,7 +34,7 @@ public class heapsort {
                 }
                 if (arr[up] < arr[max]) {
                     a = arr[up];
-                    arr[up]= arr[max];
+                    arr[up] = arr[max];
                     arr[max] = a;
                     up = max;
                 } else {
@@ -43,7 +46,10 @@ public class heapsort {
             a = arr[0];
             arr[0] = arr[i];
             arr[i] = a;
-            int max; int flag = 0; int up = 0; int down = i - 1;
+            int max;
+            int flag = 0;
+            int up = 0;
+            int down = i - 1;
             while ((up * 2 <= down) && (flag == 0)) {
                 if (up * 2 == down) {
                     max = up * 2;
@@ -56,7 +62,7 @@ public class heapsort {
                 }
                 if (arr[up] < arr[max]) {
                     a = arr[up];
-                    arr[up]= arr[max];
+                    arr[up] = arr[max];
                     arr[max] = a;
                     up = max;
                 } else {
