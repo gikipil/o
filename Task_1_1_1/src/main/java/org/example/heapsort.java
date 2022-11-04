@@ -1,34 +1,35 @@
 package org.example;
-import java.util.ArrayList;
 
 /**
- * Класс сортировки кучей, содержащий метод сортировки
+ * Класс сортировки кучей, содержащий метод сортировки.
  */
 public class heapsort {
-    /** Метод sort класса Heapsort является статичным публичным методом. Не требует обьявление обьекта для использования.
+    /** Метод sort класса Heapsort является статичным публичным методом.
+     * Не требует обьявление обьекта для использования.
      * @param len - длина массива, типа Int.
-     * @param list - непосредственно массив, который нужно отсортировать. Массив должен быть типа Int/
+     * @param list - непосредственно массив, который нужно отсортировать.
+     *             Массив должен быть типа Int/
      * @return возвращает Строку типа String с отсортированным массиов, элементы которого разделены знаком " ".
      */
-    public static String sort(int len, int [] list){
+    public static String sort (int len, int [] list) {
         int a = 0;
         int [] arr = list;
-        if (arr.length == 0){
+        if (arr.length == 0) {
             return "";
         }
-        for(int i = len/2; i >= 0; i--){
+        for (int i = len / 2; i >= 0; i--) {
             int max; int flag = 0; int up = i;
-            while ((up*2 <= len-1) && (flag == 0)){
-                if(up*2 == len-1){
-                    max = up*2;
+            while ((up * 2 <= len - 1) && (flag == 0)) {
+                if (up * 2 == len - 1) {
+                    max = up * 2;
                 } else {
-                    if(arr[up*2] > arr[up*2+1]){
-                        max = up*2;
+                    if (arr[up * 2] > arr[up * 2 + 1]) {
+                        max = up * 2;
                     } else {
-                        max = up*2+1;
+                        max = up * 2 + 1;
                     }
                 }
-                if (arr[up] < arr[max]){
+                if (arr[up] < arr[max]) {
                     a = arr[up];
                     arr[up]= arr[max];
                     arr[max] = a;
@@ -38,22 +39,22 @@ public class heapsort {
                 }
             }
         }
-        for(int i = len - 1; i >= 1; i--){
+        for (int i = len - 1; i >= 1; i--) {
             a = arr[0];
             arr[0] = arr[i];
             arr[i] = a;
-            int max; int flag = 0; int up = 0; int down = i -1;
-            while ((up*2 <= down) && (flag == 0)){
-                if(up*2 == down){
-                    max = up*2;
+            int max; int flag = 0; int up = 0; int down = i - 1;
+            while ((up * 2 <= down) && (flag == 0)) {
+                if (up * 2 == down) {
+                    max = up * 2;
                 } else {
-                    if(arr[up*2] > arr[up*2+1]){
-                        max = up*2;
+                    if (arr[up * 2] > arr[up * 2 + 1]) {
+                        max = up * 2;
                     } else {
-                        max = up*2+1;
+                        max = up * 2 + 1;
                     }
                 }
-                if (arr[up] < arr[max]){
+                if (arr[up] < arr[max]) {
                     a = arr[up];
                     arr[up]= arr[max];
                     arr[max] = a;
@@ -64,7 +65,7 @@ public class heapsort {
             }
         }
         String ans = "";
-        for (int i : arr){
+        for (int i : arr) {
             ans = ans + i + " ";
         }
         return ans;

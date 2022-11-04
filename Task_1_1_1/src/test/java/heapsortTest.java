@@ -1,8 +1,6 @@
-
 import org.junit.jupiter.api.Test;
 import org.example.heapsort;
 
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -38,7 +36,7 @@ public class heapsortTest {
     }
     @Test
     public static void sort5() {
-        int [] arr = {0,-1,-2,-3,-4,-5};
+        int [] arr = {0, -1, -2, -3, -4, -5};
         System.out.println("Создан массив: 0,-1,-2,-3,-4,-5");
         assertEquals(heapsort.sort(arr.length,arr), "-5 -4 -3 -2 -1 0 ");
         System.out.println("Массив успешно отсортирован!");
