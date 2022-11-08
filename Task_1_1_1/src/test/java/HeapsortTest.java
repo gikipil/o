@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.example.Heapsort;
 import org.junit.jupiter.api.Test;
@@ -14,10 +14,11 @@ public class HeapsortTest {
      */
 
     @Test
-    public static void sort1() {
+    void sort1() {
         int[] arr = {1, 5, 3, 9, 12, 6, 33};
+        int[] ans = {1, 3, 5, 6, 9, 12, 33};
         System.out.println("Создан массив: 1,5,3,9,12,6,33");
-        assertEquals(Heapsort.sort(arr.length, arr), "1 3 5 6 9 12 33 ");
+        assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
     }
 
@@ -26,10 +27,11 @@ public class HeapsortTest {
      */
 
     @Test
-    public static void sort2() {
+    void sort2() {
         int[] arr = {56, 3, 4, 3, 1, 3};
+        int[] ans = {1, 3, 3, 3, 4, 56};
         System.out.println("Создан массив: 56,3,4,3,1,3");
-        assertEquals(Heapsort.sort(arr.length, arr), "1 3 3 3 4 56 ");
+        assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
     }
 
@@ -38,10 +40,11 @@ public class HeapsortTest {
      */
 
     @Test
-    public static void sort3() {
+    void sort3() {
         int[] arr = {};
+        int[] ans = {};
         System.out.println("Создан пустой массив");
-        assertEquals(Heapsort.sort(arr.length, arr), "");
+        assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
     }
 
@@ -50,10 +53,11 @@ public class HeapsortTest {
      */
 
     @Test
-    public static void sort4() {
+    void sort4() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] ans = {1, 2, 3, 4, 5, 6, 7 ,8};
         System.out.println("Создан массив: 1,2,3,4,5,6,7,8");
-        assertEquals(Heapsort.sort(arr.length, arr), "1 2 3 4 5 6 7 8 ");
+        assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
     }
 
@@ -62,10 +66,11 @@ public class HeapsortTest {
      */
 
     @Test
-    public static void sort5() {
+    void sort5() {
         int [] arr = {0, -1, -2, -3, -4, -5};
+        int [] ans = {-5, -4, -3, -2, -1, 0};
         System.out.println("Создан массив: 0,-1,-2,-3,-4,-5");
-        assertEquals(Heapsort.sort(arr.length, arr), "-5 -4 -3 -2 -1 0 ");
+        assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
     }
 }

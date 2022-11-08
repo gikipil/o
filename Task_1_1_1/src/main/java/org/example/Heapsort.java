@@ -7,18 +7,15 @@ public class Heapsort {
     /** Метод sort класса Heapsort является статичным публичным методом.
      * Не требует обьявление обьекта для использования.
      *
-     * @param len - длина массива, типа Int.
-     *
-     * @param list - непосредственно массив, который нужно отсортировать.
+     * @param arr - непосредственно массив, который нужно отсортировать.
      *             Массив должен быть типа Int/
-     * @return возвращает Строку типа String с отсортированным массивом.
-     *             Элементы разделены знаком " ".
+     * @return возвращает отсортированный массив".
      */
-    public static String sort(int len, int [] list) {
+    public static int[] sort(int [] arr) {
+        int len = arr.length;
         int a = 0;
-        int [] arr = list;
         if (arr.length == 0) {
-            return "";
+            return arr;
         }
         for (int i = len / 2; i >= 0; i--) {
             int max;
@@ -72,10 +69,6 @@ public class Heapsort {
                 }
             }
         }
-        String ans = "";
-        for (int i : arr) {
-            ans = ans + i + " ";
-        }
-        return ans;
+        return arr;
     }
 }
