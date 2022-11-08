@@ -55,7 +55,7 @@ public class HeapsortTest {
     @Test
     void sort4() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
-        int[] ans = {1, 2, 3, 4, 5, 6, 7 ,8};
+        int[] ans = {1, 2, 3, 4, 5, 6, 7, 8};
         System.out.println("Создан массив: 1,2,3,4,5,6,7,8");
         assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
