@@ -1,7 +1,8 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.example.Heapsort;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Класс тестирования сортировки кучей.
