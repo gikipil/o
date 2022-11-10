@@ -3,6 +3,9 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import org.example.Heapsort;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.Random;
+
 
 /**
  * Класс тестирования сортировки кучей.
@@ -31,6 +34,27 @@ public class HeapsortTest {
         int[] arr = {};
         int[] ans = {};
         System.out.println("Создан пустой массив");
+        assertArrayEquals(Heapsort.sort(arr), ans);
+        System.out.println("Массив успешно отсортирован!");
+    }
+
+    /**
+     * Тестирование случайного списка.
+     */
+
+    @Test
+    void randomArrayTest(){
+        Random generator = new Random();
+        int len = generator.nextInt(1000);
+        int [] arr = new int[len];
+        int [] ans = new int[len];
+        for (int i = 0; i < len; i++){
+            int val = generator.nextInt();
+            arr[i] = val;
+            ans[i] = val;
+        }
+        Arrays.sort(ans);
+        System.out.println("Создан случайный массив");
         assertArrayEquals(Heapsort.sort(arr), ans);
         System.out.println("Массив успешно отсортирован!");
     }

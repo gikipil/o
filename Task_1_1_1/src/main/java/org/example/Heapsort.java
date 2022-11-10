@@ -4,14 +4,14 @@ package org.example;
  * Класс сортировки кучей, содержащий метод сортировки.
  */
 public class Heapsort {
-    /** Метод sort класса Heapsort является статичным публичным методом.
+    /** Метод heap класса Heapsort является статичным публичным методом.
      * Не требует обьявление обьекта для использования.
      *
      * @param arr - непосредственно массив, который нужно отсортировать.
      *             Массив должен быть типа Int/
-     * @return возвращает отсортированный массив".
+     * @return возвращает просеяную кучу с минимальным элементом в корне.
      */
-    public static int[] sort(int [] arr) {
+    public static int[] heap(int [] arr) {
         int len = arr.length;
         int a = 0;
         if (arr.length == 0) {
@@ -40,6 +40,23 @@ public class Heapsort {
                     flag = 1;
                 }
             }
+        }
+        return arr;
+    }
+
+    /** Метод sort класса Heapsort является статичным публичным методом.
+     * Использует метод heap для создания просеяной кучи.
+     * @param list - непосредственно массив, который нужно отсортировать.
+     *      *             Массив должен быть типа Int/
+     * @return возвращает просеяную кучу с минимальным элементом в корне.
+     */
+
+    public static int[] sort(int [] list){
+        int [] arr = Heapsort.heap(list);
+        int len = arr.length;
+        int a = 0;
+        if (arr.length == 0) {
+            return arr;
         }
         for (int i = len - 1; i >= 1; i--) {
             a = arr[0];
