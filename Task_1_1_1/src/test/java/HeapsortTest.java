@@ -1,8 +1,8 @@
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.example.Heapsort;
 import java.util.Arrays;
 import java.util.Random;
+import org.example.Heapsort;
 import org.junit.jupiter.api.Test;
 
 
