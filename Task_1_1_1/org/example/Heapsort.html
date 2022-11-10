@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9};
+var data = {"i0":9,"i1":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -175,7 +175,14 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static int[]</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sort(int%5B%5D)">sort</a></span>&#8203;(int[]&nbsp;arr)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#heap(int%5B%5D)">heap</a></span>&#8203;(int[]&nbsp;arr)</code></th>
+<td class="colLast">
+<div class="block">Метод heap класса Heapsort является статичным публичным методом.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static int[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sort(int%5B%5D)">sort</a></span>&#8203;(int[]&nbsp;list)</code></th>
 <td class="colLast">
 <div class="block">Метод sort класса Heapsort является статичным публичным методом.</div>
 </td>
@@ -223,21 +230,39 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="sort(int[])">
+<a id="heap(int[])">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
-<h4>sort</h4>
-<pre class="methodSignature">public static&nbsp;int[]&nbsp;sort&#8203;(int[]&nbsp;arr)</pre>
-<div class="block">Метод sort класса Heapsort является статичным публичным методом.
+<h4>heap</h4>
+<pre class="methodSignature">public static&nbsp;int[]&nbsp;heap&#8203;(int[]&nbsp;arr)</pre>
+<div class="block">Метод heap класса Heapsort является статичным публичным методом.
  Не требует обьявление обьекта для использования.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>arr</code> - - непосредственно массив, который нужно отсортировать.
              Массив должен быть типа Int/</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>возвращает отсортированный массив".</dd>
+<dd>возвращает просеяную кучу с минимальным элементом в корне.</dd>
+</dl>
+</li>
+</ul>
+<a id="sort(int[])">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>sort</h4>
+<pre class="methodSignature">public static&nbsp;int[]&nbsp;sort&#8203;(int[]&nbsp;list)</pre>
+<div class="block">Метод sort класса Heapsort является статичным публичным методом.
+ Использует метод heap для создания просеяной кучи.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>list</code> - - непосредственно массив, который нужно отсортировать.
+      *             Массив должен быть типа Int/</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>возвращает просеяную кучу с минимальным элементом в корне.</dd>
 </dl>
 </li>
 </ul>
