@@ -51,7 +51,7 @@ public class Heapsort {
      * @return возвращает просеяную кучу с минимальным элементом в корне.
      */
 
-    public static int[] sort(int [] list){
+    public static int[] sort(int [] list) {
         int [] arr = Heapsort.heap(list);
         int len = arr.length;
         int a = 0;
