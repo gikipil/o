@@ -1,21 +1,21 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.Random;
 import org.example.Stack;
 import org.junit.jupiter.api.Test;
 
 /**
- * Testing class
+ * Testing class.
  */
 
 public class StackTest {
 
     /**
-     * Testing basic functions
+     * Testing basic functions.
      */
 
     @Test
-    void functionTest(){
+    void functionTest() {
         Stack stack = new Stack();
         stack.push(2);
         stack.push(4);
@@ -35,11 +35,11 @@ public class StackTest {
     }
 
     /**
-     * Testing an empty stack
+     * Testing an empty stack.
      */
 
     @Test
-    void emptyTest(){
+    void emptyTest() {
         Stack stack = new Stack();
         stack.pop();
         stack.pop();
@@ -50,17 +50,17 @@ public class StackTest {
     }
 
     /**
-     * Testing multiple stacks
+     * Testing multiple stacks.
      */
 
     @Test
-    void multipleTest () {
+    void multipleTest() {
         Stack stack1 = new Stack();
-        Stack stack2 = new Stack();
-        Stack stack3 = new Stack();
         stack1.push(1);
         stack1.push(67);
+        Stack stack2 = new Stack();
         stack2.push("dsa");
+        Stack stack3 = new Stack();
         stack3.push(true);
         stack2.push("tea");
         stack1.push(54);
@@ -75,22 +75,22 @@ public class StackTest {
         System.out.println("Successfully completed");
     }
     /**
-     * Testing random stacks
+     * Testing random stacks.
      */
 
     @Test
-    void randomTest (){
+    void randomTest() {
         Random generator = new Random();
         int len = generator.nextInt(1000);
         Stack stack = new Stack();
         Stack ans = new Stack();
-        for(int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++){
             Integer val = generator.nextInt();
             stack.push(val);
             ans.push(val);
         }
         len = generator.nextInt(1000);
-        for(int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++){
             stack.pop();
             ans.pop();
         }
