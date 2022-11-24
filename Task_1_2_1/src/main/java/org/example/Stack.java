@@ -51,23 +51,25 @@ public class Stack {
 
     /**
      *The method adds an object to the stack.
+     *
      * @param obj The object to add to the stack.
      */
     public void push(Object obj) {
-        if (size == cap){
+        if (size == cap) {
             realloc();
         }
         list[size] = obj;
-        size ++;
+        size++;
     }
 
     /**
      *The method adds a group of objects to the stack.
+     *
      * @param obj Array of objects to be added to the stack.
      */
 
     public void pushStack(Object [] obj) {
-        for (Object i: obj) {
+        for (Object i : obj) {
             push(i);
         }
     }
@@ -78,13 +80,14 @@ public class Stack {
 
     public void pop() {
         if (size > 0) {
-            size --;
+            size--;
             list[size] = null;
         }
     }
 
     /**
      * The method removes the specified number of objects from the stack.
+     *
      * @param k number of objects.
      */
 
@@ -96,6 +99,7 @@ public class Stack {
 
     /**
      * Method for determining the stack size.
+     *
      * @return stack size.
      */
 
@@ -105,6 +109,7 @@ public class Stack {
 
     /**
      * The method that returns the stack.
+     *
      * @return stack.
      */
 
@@ -113,7 +118,7 @@ public class Stack {
             return new Object[0];
         }
         Object [] ans = new Object[size];
-        System.arraycopy(list,0,ans,0,size);
+        System.arraycopy(list, 0, ans, 0, size);
         return ans;
     }
 }

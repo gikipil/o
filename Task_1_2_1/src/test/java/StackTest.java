@@ -84,13 +84,13 @@ public class StackTest {
         int len = generator.nextInt(1000);
         Stack stack = new Stack();
         Stack ans = new Stack();
-        for (int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++) {
             Integer val = generator.nextInt();
             stack.push(val);
             ans.push(val);
         }
         len = generator.nextInt(1000);
-        for (int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++) {
             stack.pop();
             ans.pop();
         }
