@@ -115,14 +115,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.example</a></div>
-<h2 title="Class Stack" class="title">Class Stack</h2>
+<h2 title="Class Stack" class="title">Class Stack&lt;T&gt;</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.example.Stack</li>
+<li>org.example.Stack&lt;T&gt;</li>
 </ul>
 </li>
 </ul>
@@ -130,7 +130,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <hr>
-<pre>public class <span class="typeNameLabel">Stack</span>
+<pre>public class <span class="typeNameLabel">Stack&lt;T&gt;</span>
 extends java.lang.Object</pre>
 <div class="block">A class implementing the stack.</div>
 </li>
@@ -199,20 +199,20 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#push(java.lang.Object)">push</a></span>&#8203;(java.lang.Object&nbsp;obj)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#push(T)">push</a></span>&#8203;(<a href="Stack.html" title="type parameter in Stack">T</a>&nbsp;obj)</code></th>
 <td class="colLast">
 <div class="block">The method adds an object to the stack.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pushStack(java.lang.Object%5B%5D)">pushStack</a></span>&#8203;(java.lang.Object[]&nbsp;obj)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pushStack(T%5B%5D)">pushStack</a></span>&#8203;(<a href="Stack.html" title="type parameter in Stack">T</a>[]&nbsp;obj)</code></th>
 <td class="colLast">
 <div class="block">The method adds a group of objects to the stack.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>java.lang.Object[]</code></td>
+<td class="colFirst"><code><a href="Stack.html" title="type parameter in Stack">T</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#show()">show</a></span>()</code></th>
 <td class="colLast">
 <div class="block">The method that returns the stack.</div>
@@ -264,11 +264,13 @@ extends java.lang.Object</pre>
 <h3>Method Detail</h3>
 <a id="push(java.lang.Object)">
 <!--   -->
+</a><a id="push(T)">
+<!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>push</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;push&#8203;(java.lang.Object&nbsp;obj)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;push&#8203;(<a href="Stack.html" title="type parameter in Stack">T</a>&nbsp;obj)</pre>
 <div class="block">The method adds an object to the stack.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -278,11 +280,13 @@ extends java.lang.Object</pre>
 </ul>
 <a id="pushStack(java.lang.Object[])">
 <!--   -->
+</a><a id="pushStack(T[])">
+<!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>pushStack</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;pushStack&#8203;(java.lang.Object[]&nbsp;obj)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;pushStack&#8203;(<a href="Stack.html" title="type parameter in Stack">T</a>[]&nbsp;obj)</pre>
 <div class="block">The method adds a group of objects to the stack.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -334,7 +338,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>show</h4>
-<pre class="methodSignature">public&nbsp;java.lang.Object[]&nbsp;show()</pre>
+<pre class="methodSignature">public&nbsp;<a href="Stack.html" title="type parameter in Stack">T</a>[]&nbsp;show()</pre>
 <div class="block">The method that returns the stack.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
