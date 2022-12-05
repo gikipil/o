@@ -4,13 +4,13 @@ package org.example;
  * A class implementing the stack.
  */
 
-public class Stack {
+public class Stack<T> {
 
     /**
      * An array that stores objects.
      */
 
-    private Object [] list;
+    private T [] list;
 
     /**
      * Stack size.
@@ -29,7 +29,7 @@ public class Stack {
      */
 
     public Stack() {
-        list = new Object[10];
+        list = (T[]) new Object[10];
         size = 0;
         cap = 10;
     }
@@ -43,7 +43,7 @@ public class Stack {
         cap *= 2;
         Object [] temp = new Object [size];
         System.arraycopy(list, 0, temp, 0, size);
-        list = new Object [cap];
+        list = (T[]) new Object [cap];
         if (size >= 0) {
             System.arraycopy(temp, 0, list, 0, size);
         }
@@ -54,7 +54,7 @@ public class Stack {
      *
      * @param obj The object to add to the stack.
      */
-    public void push(Object obj) {
+    public void push(T obj) {
         if (size == cap) {
             realloc();
         }
@@ -68,8 +68,8 @@ public class Stack {
      * @param obj Array of objects to be added to the stack.
      */
 
-    public void pushStack(Object [] obj) {
-        for (Object i : obj) {
+    public void pushStack(T [] obj) {
+        for (T i : obj) {
             push(i);
         }
     }
@@ -113,11 +113,11 @@ public class Stack {
      * @return stack.
      */
 
-    public Object [] show() {
+    public T [] show() {
         if (size == 0) {
-            return new Object[0];
+            return (T[]) new Object[0];
         }
-        Object [] ans = new Object[size];
+        T [] ans = (T[]) new Object[size];
         System.arraycopy(list, 0, ans, 0, size);
         return ans;
     }
