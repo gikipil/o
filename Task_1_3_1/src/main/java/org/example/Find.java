@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 
@@ -32,11 +33,10 @@ public class Find {
 
     public String openfile (String name) throws IOException {
         String file = "src/test/resources/" + name;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
         String line = "";
         String text = "";
         while(line != null){
-            line = reader.readLine();
             text = text + line;
         }
         return text;
