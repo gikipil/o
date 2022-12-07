@@ -31,7 +31,7 @@ public class Find {
 
     public String openfile (String name) throws IOException {
         String file = "src/test/resources/" + name;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "Windows-1251"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
         String line = "";
         String text = "";
         while(line != null){
